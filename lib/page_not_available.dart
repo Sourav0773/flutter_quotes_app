@@ -9,8 +9,8 @@ class PageNotAvailable extends StatelessWidget {
       body: Center(
         child: Image.asset(
           'assets/page_not_found.gif',
-          height: 900,
-          width: 900,
+          height: 200,
+          width: 200,
           fit: BoxFit.contain
         ),
       ),

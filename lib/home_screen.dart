@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/like_screen.dart';
+import 'package:quotes_app/favourite_screen.dart';
 import 'package:quotes_app/page_not_available.dart';
 import 'package:quotes_app/quote_screen.dart';
 
@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Center(
           child: const Text(
-            'Quotes App Home',
+            'Quotes App',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const DifferentScreens(destinationScreen: QuoteScreen(), emoji: '😊', emojiText: 'Happy Quotes',),
+                DifferentScreens(destinationScreen: QuoteScreen(), emoji: '😊', emojiText: 'Happy Quotes',),
                 const SizedBox(width: 22),
                 const DifferentScreens(destinationScreen: LikeScreen(), emoji: '❤️', emojiText: 'Favourites',),
               ],
@@ -54,10 +54,18 @@ class DifferentScreens extends StatefulWidget {
   final Widget? destinationScreen;
   final String emoji;
   final String emojiText;
-  const DifferentScreens({super.key, required this.destinationScreen, required this.emoji, required this.emojiText});
+
+  const DifferentScreens({
+    super.key, 
+    required this.destinationScreen, 
+    required this.emoji, 
+    required this.emojiText
+  });
 
   @override
-  State<DifferentScreens> createState() => DifferentScreensState();
+  State<DifferentScreens> createState(){
+    return DifferentScreensState();
+  } 
 }
 
 class DifferentScreensState extends State<DifferentScreens> {
