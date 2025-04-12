@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:quotes_app/model.dart';
+import 'package:quotes_app/Models/model.dart';
 
 Future<List<QuoteDataModel>> quoteAPI({int page = 1, int limit = 10}) async{
   final dio = Dio();

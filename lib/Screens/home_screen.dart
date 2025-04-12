@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/favourite_screen.dart';
-import 'package:quotes_app/page_not_available.dart';
-import 'package:quotes_app/quote_screen.dart';
+import 'package:quotes_app/Screens/error_scrren.dart';
+import 'package:quotes_app/Screens/favourite_screen.dart';
+import 'package:quotes_app/Screens/quote_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -22,17 +22,20 @@ class HomeScreen extends StatelessWidget {
 
       body: Padding(
         padding: const EdgeInsets.all(20),
+
         child: Column(
           children: [
+
             const SizedBox(height: 140),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                DifferentScreens(destinationScreen: QuoteScreen(), emoji: '😊', emojiText: 'Happy Quotes',),
+                const DifferentScreens(destinationScreen: QuoteScreen(), emoji: '😊', emojiText: 'Happy Quotes',),
                 const SizedBox(width: 22),
                 const DifferentScreens(destinationScreen: LikeScreen(), emoji: '❤️', emojiText: 'Favourites',),
               ],
             ),
+
             const SizedBox(height: 22),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -42,6 +45,7 @@ class HomeScreen extends StatelessWidget {
                 const DifferentScreens(destinationScreen: null, emoji: '🔗', emojiText: 'Share',),
               ],
             ),
+
           ],
         ),
       ),
@@ -84,6 +88,7 @@ class DifferentScreensState extends State<DifferentScreens> {
   @override
   Widget build(BuildContext context) {
     return Center(
+      
       child: GestureDetector(
         onTap: () => navigateToScreen(),
         onTapUp: (val) {

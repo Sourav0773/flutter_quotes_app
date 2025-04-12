@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/home_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:quotes_app/Screens/home_screen.dart';
+import 'package:quotes_app/Provider/provider.dart';
 
 void main() {
-  runApp(QuotesApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => QuoteAppProvider(),
+      child: const QuotesApp(),
+    )
+  );
 }
 
 class QuotesApp extends StatelessWidget {

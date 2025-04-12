@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/pagination.dart';
+import 'package:quotes_app/Reusable_Widgets/quote_card_listview.dart';
 
 class QuoteScreen extends StatelessWidget {
   const QuoteScreen({super.key});
@@ -16,7 +16,7 @@ class QuoteScreen extends StatelessWidget {
             child: CircleAvatar(
               radius: 25,
               backgroundColor: Colors.black,
-              child: Center(child: Icon(Icons.arrow_back, color: Colors.white)),
+              child: Center(child: const Icon(Icons.arrow_back, color: Colors.white)),
             ),
           ),
         ),
