@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_app/Provider/provider.dart';
-import 'package:quotes_app/Reusable_Widgets/quote_card.dart';
+import 'package:quotes_app/QuotesCards/quote_card.dart';
 import 'package:provider/provider.dart';
 
 class LikeScreen extends StatefulWidget {

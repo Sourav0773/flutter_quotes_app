@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/Reusable_Widgets/quote_card_listview.dart';
+import 'package:quotes_app/QuotesCards/quote_card_listview.dart';
 
 class QuoteScreen extends StatelessWidget {
   const QuoteScreen({super.key});

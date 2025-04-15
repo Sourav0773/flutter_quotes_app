@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/UI_Logics/ui_helper_func.dart';
+import 'package:quotes_app/QuotesCards/quote_card_button_logics.dart';
 
 class QuoteCard extends StatelessWidget {
   final String id;

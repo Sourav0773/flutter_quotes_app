@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const DifferentScreens(destinationScreen: null, emoji: '⭐', emojiText: 'Rating',),
+                const DifferentScreens(destinationScreen: null, emoji: '⌛', emojiText: 'History',),
                 const SizedBox(width: 22),
                 const DifferentScreens(destinationScreen: null, emoji: '🔗', emojiText: 'Share',),
               ],
