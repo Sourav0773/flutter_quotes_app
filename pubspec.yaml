@@ -13,6 +13,7 @@ dependencies:
   social_sharing_plus: ^1.2.3
   share_plus: ^10.1.4
   provider: ^6.1.4
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_app/QuotesCards/quote_card_button_logics.dart';
 
+TextEditingController commentController = TextEditingController();
+
 class QuoteCard extends StatelessWidget {
   final String id;
   final String quote;
@@ -16,6 +18,7 @@ class QuoteCard extends StatelessWidget {
     required this.userLiked,
     required this.afterUserLiked,
   });
+
 
   @override
   Widget build(BuildContext context) {
@@ -98,10 +101,10 @@ class QuoteCard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              //Review button
+              //Comment button
               IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.rate_review_outlined),
+                onPressed: () => onComment(context, quote, commentController),
+                icon: const Icon(Icons.comment_outlined),
               ),
 
               //Copy button
