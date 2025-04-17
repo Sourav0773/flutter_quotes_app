@@ -133,13 +133,13 @@ class DifferentScreensState extends State<DifferentScreens> {
             children: [
               Text(
                 widget.emoji,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 35,
                 ),
               ),
               Text(
                 widget.emojiText,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold
                 ),

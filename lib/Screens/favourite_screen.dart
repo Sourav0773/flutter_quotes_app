@@ -17,7 +17,7 @@ class LikeScreenState extends State<LikeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 70,
+       toolbarHeight: 70,
         leading: GestureDetector(
           onTap: () => Navigator.pop(context),
           child: Padding(

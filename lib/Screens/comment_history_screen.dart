@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:quotes_app/Provider/provider.dart';
+import 'package:intl/intl.dart';
+
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({super.key});
@@ -15,7 +19,9 @@ class HistoryScreen extends StatelessWidget {
             child: CircleAvatar(
               radius: 25,
               backgroundColor: Colors.black,
-              child: Center(child: const Icon(Icons.arrow_back, color: Colors.white)),
+              child: Center(
+                child: const Icon(Icons.arrow_back, color: Colors.white),
+              ),
             ),
           ),
         ),
@@ -23,10 +29,31 @@ class HistoryScreen extends StatelessWidget {
         title: Padding(
           padding: const EdgeInsets.only(left: 55),
           child: const Text(
-            'Comment Histroy',
+            'Comment History',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
+      ),
+      body: Consumer<QuoteAppProvider>(
+        builder: (context, provider, child) {
+          return ListView.separated(
+            itemCount: provider.comments.length,
+            separatorBuilder: (context, index) => Divider(thickness: 0.5),
+            itemBuilder: (context, index) {
+              final comment = provider.comments[index];
+              final formattedTime = DateFormat('yyyy-MM-dd - hh:mm a').format(comment['time']);
+
+              return ListTile(
+                leading: Text('${index + 1}.', style: TextStyle(fontSize: 15)),
+                title: Text(comment['text']),
+                subtitle: Text(
+                  formattedTime,
+                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                ),
+              );
+            },
+          );
+        },
       ),
     );
   }

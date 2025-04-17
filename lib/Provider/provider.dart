@@ -6,7 +6,7 @@ class QuoteAppProvider extends ChangeNotifier {
   final List<QuoteDataModel> quotes = [];
   final List<QuoteDataModel> likedQuotes = [];
 
-  final List<String> comments = [];
+  final List<Map<String, dynamic>> comments = [];
 
   int currentPage = 1;
   bool isLoading = false;
@@ -49,20 +49,13 @@ class QuoteAppProvider extends ChangeNotifier {
   }
 
   /////////////////////////////////
-  //Add comments///////////////////
-  //////////////////////////////////
-  void addComments(String comment) {
-    comments.add(comment);
-  }
-
-  /////////////////////////////////
   //On post////////////////////////
   /////////////////////////////////
   void onPost(BuildContext context) {
     String comment = commentController.text.trim();
     if (comment.isNotEmpty) {
-      comments.add(comment);
-      print('commnet posted succesfully $comment');
+      comments.add({'text': comment, 'time': DateTime.now()});
+      //print('commnet posted succesfully $comment');
       commentController.clear();
       notifyListeners();
       Navigator.of(context).pop();
