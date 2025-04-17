@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_app/Screens/error_scrren.dart';
 import 'package:quotes_app/Screens/favourite_screen.dart';
-import 'package:quotes_app/Screens/history_screen.dart';
-import 'package:quotes_app/Screens/quote_screen.dart';
+import 'package:quotes_app/Screens/comment_history_screen.dart';
+import 'package:quotes_app/Screens/QuoteScreen/quote_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const DifferentScreens(destinationScreen: HistoryScreen(), emoji: '⌛', emojiText: 'History',),
+                const DifferentScreens(destinationScreen: HistoryScreen(), emoji: '⌛', emojiText: 'Comment History',),
                 const SizedBox(width: 22),
                 const DifferentScreens(destinationScreen: null, emoji: '🔗', emojiText: 'Share',),
               ],

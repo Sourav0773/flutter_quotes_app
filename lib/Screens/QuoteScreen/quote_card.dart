@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/QuotesCards/quote_card_button_logics.dart';
+import 'package:quotes_app/Screens/QuoteScreen/quote_card_button_logics.dart';
 
 TextEditingController commentController = TextEditingController();
 
@@ -103,7 +103,7 @@ class QuoteCard extends StatelessWidget {
             children: [
               //Comment button
               IconButton(
-                onPressed: () => onComment(context, quote, commentController),
+                onPressed: () => onComment(context),
                 icon: const Icon(Icons.comment_outlined),
               ),
 
